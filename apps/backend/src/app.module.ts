@@ -6,17 +6,12 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { DirectiveLocation, GraphQLDirective } from 'graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import configuration from './config/configuration';
 import { WeatherModule } from './modules/weather/weather.module';
 import { upperDirectiveTransformer } from './common/directives/upper-case.directive';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../..', 'frontend', 'dist'),
-    }),
     ConfigModule.forRoot({
       isGlobal: true,
       load: [configuration],
@@ -36,8 +31,9 @@ import { upperDirectiveTransformer } from './common/directives/upper-case.direct
         ],
       },
     }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '../..', 'frontend', 'dist'),
+    }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
