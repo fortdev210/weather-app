@@ -25,5 +25,10 @@ export const WeatherCard = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  return <div>{data.weather.id}</div>;
+  return (
+    <div>
+      {data.weather.id}
+      <p className='text-xl text-red-600'>Tailwind</p>
+    </div>
+  );
 };

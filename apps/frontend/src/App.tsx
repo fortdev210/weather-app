@@ -2,7 +2,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 import { WeatherCard } from "./components/weather-card";
 
-import "./App.css";
+import "./index.css";
 
 const client = new ApolloClient({
   uri: "http://localhost:3000/graphql",
