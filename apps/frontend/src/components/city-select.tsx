@@ -17,7 +17,7 @@ interface CitySelectProps {
   /**
    * onChange
    */
-  onChange: (v: string | undefined) => void;
+  onChange: (v: string) => void;
 }
 
 export const CitySelect: React.FC<CitySelectProps> = ({
@@ -28,8 +28,9 @@ export const CitySelect: React.FC<CitySelectProps> = ({
     <div className={clsx(styles.base, className)}>
       <Select
         options={AVAILABLE_CITIES}
-        onChange={(v) => onChange(v?.value)}
+        onChange={(v) => onChange(v ? v.value : AVAILABLE_CITIES[0].value)}
         className='w-80'
+        defaultValue={AVAILABLE_CITIES[0]}
       />
     </div>
   );

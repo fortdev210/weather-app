@@ -57,7 +57,7 @@ export const WeatherCard = ({ city }: WeatherCardProps) => {
           {convertKelvinToCelcius(main.temp)}°
         </div>
         <div className='flex flex-col items-center ml-6'>
-          <div>Cloudy</div>
+          <div>{weather[0].main}</div>
           <div className='mt-1'>
             <span className='text-sm'>
               <i className='far fa-long-arrow-up'></i>
