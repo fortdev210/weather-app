@@ -1,6 +1,6 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
-import { WeatherCard } from "./components/weather-card";
+import { WeatherView } from "./pages/weather-view";
 
 import "./index.css";
 
@@ -12,7 +12,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <WeatherCard />
+      <WeatherView />
     </ApolloProvider>
   );
 }
