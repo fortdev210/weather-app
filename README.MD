@@ -3,6 +3,7 @@
 - `backend` is using `nestjs` and graphql. `backend` generates graphql endpoint that are consumed on frontend.
 - `frontend` is done using `vite` and `react`. frontend uses data that are fetched via graphql query.
 - This app shows the weather data of several cities such as HK, NY, Sydney and LA.
+- This repo can be used as a starter project of a full stack web application that uses `Nest`, `GraphQL`, `React`, `Vite` inside a monorepo.
 
 ```bash
 1. clone this repo

@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NotFoundException } from '@nestjs/common';
-import { Args, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
-import { PubSub } from 'graphql-subscriptions';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 
 import { WeatherService } from './weather.service';
 import { WeatherModel } from './models/weather.model';
-
-const pubSub = new PubSub();
 
 @Resolver((of) => WeatherModel)
 export class WeatherResolver {
