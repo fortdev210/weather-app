@@ -5,7 +5,7 @@ import { WeatherView } from "./pages/weather-view";
 import "./index.css";
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/graphql",
+  uri: import.meta.env.VITE_GRAPHQL_END_POINT as string,
   cache: new InMemoryCache(),
 });
 

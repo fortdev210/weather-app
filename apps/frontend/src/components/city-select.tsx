@@ -2,7 +2,6 @@ import Select from "react-select";
 import clsx from "clsx";
 
 import { AVAILABLE_CITIES } from "../utils/constants";
-import { useState } from "react";
 
 const styles = {
   base: "",
